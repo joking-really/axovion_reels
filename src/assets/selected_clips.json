@@ -1,0 +1,130 @@
+{
+  "tof_hook_bg": {
+    "id": 8060394,
+    "duration": 28,
+    "user": "Ron Lach",
+    "link": "https://videos.pexels.com/video-files/8060394/8060394-hd_1080_2048_25fps.mp4",
+    "width": 1080,
+    "height": 2048
+  },
+  "tof_problem_bg1": {
+    "id": 6930960,
+    "duration": 17,
+    "user": "Mikhail Nilov",
+    "link": "https://videos.pexels.com/video-files/6930960/6930960-hd_1080_1920_25fps.mp4",
+    "width": 1080,
+    "height": 1920
+  },
+  "tof_problem_bg2": {
+    "id": 6931573,
+    "duration": 13,
+    "user": "Mikhail Nilov",
+    "link": "https://videos.pexels.com/video-files/6931573/6931573-hd_1080_1920_25fps.mp4",
+    "width": 1080,
+    "height": 1920
+  },
+  "tof_observation_bg": {
+    "id": 8814522,
+    "duration": 9,
+    "user": "Kampus Production",
+    "link": "https://videos.pexels.com/video-files/8814522/8814522-hd_1080_1920_25fps.mp4",
+    "width": 1080,
+    "height": 1920
+  },
+  "tof_tension_bg": {
+    "id": 8048478,
+    "duration": 14,
+    "user": "AI25.Studio  Studio",
+    "link": "https://videos.pexels.com/video-files/8048478/8048478-hd_1080_1920_25fps.mp4",
+    "width": 1080,
+    "height": 1920
+  },
+  "tof_close_bg": {
+    "id": 7706626,
+    "duration": 19,
+    "user": "MART  PRODUCTION",
+    "link": "https://videos.pexels.com/video-files/7706626/7706626-hd_1080_2048_25fps.mp4",
+    "width": 1080,
+    "height": 2048
+  },
+  "mof_hook_bg": {
+    "id": 5377697,
+    "duration": 16,
+    "user": "Tima Miroshnichenko",
+    "link": "https://videos.pexels.com/video-files/5377697/5377697-hd_720_1280_25fps.mp4",
+    "width": 720,
+    "height": 1280
+  },
+  "mof_fail1_bg": {
+    "id": 9898435,
+    "duration": 24,
+    "user": "Ron Lach",
+    "link": "https://videos.pexels.com/video-files/9898435/9898435-hd_720_1366_25fps.mp4",
+    "width": 720,
+    "height": 1366
+  },
+  "mof_fail2_bg": {
+    "id": 6830019,
+    "duration": 13,
+    "user": "Andy Barbour",
+    "link": "https://videos.pexels.com/video-files/6830019/6830019-hd_720_1280_24fps.mp4",
+    "width": 720,
+    "height": 1280
+  },
+  "mof_fail3_bg": {
+    "id": 6930229,
+    "duration": 11,
+    "user": "Mikhail Nilov",
+    "link": "https://videos.pexels.com/video-files/6930229/6930229-hd_720_1280_50fps.mp4",
+    "width": 720,
+    "height": 1280
+  },
+  "mof_close_bg": {
+    "id": 19532053,
+    "duration": 19,
+    "user": "Hasan  ACI",
+    "link": "https://videos.pexels.com/video-files/19532053/19532053-hd_720_1280_30fps.mp4",
+    "width": 720,
+    "height": 1280
+  },
+  "bof_hook_bg": {
+    "id": 7918577,
+    "duration": 10,
+    "user": "Nicola Barts",
+    "link": "https://videos.pexels.com/video-files/7918577/7918577-hd_720_1280_24fps.mp4",
+    "width": 720,
+    "height": 1280
+  },
+  "bof_filter_bg": {
+    "id": 6763403,
+    "duration": 12,
+    "user": "Pavel Danilyuk",
+    "link": "https://videos.pexels.com/video-files/6763403/6763403-hd_1080_1920_25fps.mp4",
+    "width": 1080,
+    "height": 1920
+  },
+  "bof_roi_bg": {
+    "id": 6927325,
+    "duration": 3,
+    "user": "Polina Tankilevitch",
+    "link": "https://videos.pexels.com/video-files/6927325/6927325-hd_1080_1920_30fps.mp4",
+    "width": 1080,
+    "height": 1920
+  },
+  "bof_positioning_bg": {
+    "id": 10040737,
+    "duration": 11,
+    "user": "Los Muertos Crew",
+    "link": "https://videos.pexels.com/video-files/10040737/10040737-hd_1080_1920_24fps.mp4",
+    "width": 1080,
+    "height": 1920
+  },
+  "bof_close_bg": {
+    "id": 7918608,
+    "duration": 10,
+    "user": "Nicola Barts",
+    "link": "https://videos.pexels.com/video-files/7918608/7918608-hd_720_1280_24fps.mp4",
+    "width": 720,
+    "height": 1280
+  }
+}

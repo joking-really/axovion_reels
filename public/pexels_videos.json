@@ -1,0 +1,853 @@
+{
+  "office phone": [
+    {
+      "id": 6930960,
+      "duration": 17,
+      "user": "Mikhail Nilov",
+      "link": "https://videos.pexels.com/video-files/6930960/6930960-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 8347250,
+      "duration": 13,
+      "user": "Kampus Production",
+      "link": "https://videos.pexels.com/video-files/8347250/8347250-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 7423509,
+      "duration": 11,
+      "user": "Gustavo Fring",
+      "link": "https://videos.pexels.com/video-files/7423509/7423509-hd_1080_1920_30fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "businessman laptop": [
+    {
+      "id": 7918608,
+      "duration": 10,
+      "user": "Nicola Barts",
+      "link": "https://videos.pexels.com/video-files/7918608/7918608-hd_720_1280_24fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 6101149,
+      "duration": 26,
+      "user": "KATRIN  BOLOVTSOVA",
+      "link": "https://videos.pexels.com/video-files/6101149/6101149-hd_1080_2048_30fps.mp4",
+      "width": 1080,
+      "height": 2048
+    }
+  ],
+  "phone screen": [
+    {
+      "id": 6278834,
+      "duration": 13,
+      "user": "Artem Podrez",
+      "link": "https://videos.pexels.com/video-files/6278834/6278834-hd_720_1280_30fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 11698130,
+      "duration": 12,
+      "user": "Mger Akopyan",
+      "link": "https://videos.pexels.com/video-files/11698130/11698130-hd_720_1280_60fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 6612199,
+      "duration": 17,
+      "user": "Tima Miroshnichenko",
+      "link": "https://videos.pexels.com/video-files/6612199/6612199-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "receptionist": [
+    {
+      "id": 6763403,
+      "duration": 12,
+      "user": "Pavel Danilyuk",
+      "link": "https://videos.pexels.com/video-files/6763403/6763403-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 7820503,
+      "duration": 22,
+      "user": "Mikhail Nilov",
+      "link": "https://videos.pexels.com/video-files/7820503/7820503-hd_720_1280_25fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 6763345,
+      "duration": 28,
+      "user": "Pavel Danilyuk",
+      "link": "https://videos.pexels.com/video-files/6763345/6763345-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "missed call": [
+    {
+      "id": 6931573,
+      "duration": 13,
+      "user": "Mikhail Nilov",
+      "link": "https://videos.pexels.com/video-files/6931573/6931573-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 7698463,
+      "duration": 6,
+      "user": "MART  PRODUCTION",
+      "link": "https://videos.pexels.com/video-files/7698463/7698463-hd_1080_2048_25fps.mp4",
+      "width": 1080,
+      "height": 2048
+    },
+    {
+      "id": 6194923,
+      "duration": 16,
+      "user": "Diva Plavalaguna",
+      "link": "https://videos.pexels.com/video-files/6194923/6194923-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "dark office": [
+    {
+      "id": 8347253,
+      "duration": 9,
+      "user": "Kampus Production",
+      "link": "https://videos.pexels.com/video-files/8347253/8347253-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "typing keyboard": [
+    {
+      "id": 5647324,
+      "duration": 26,
+      "user": "Tima Miroshnichenko",
+      "link": "https://videos.pexels.com/video-files/5647324/5647324-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 8003418,
+      "duration": 5,
+      "user": "Pavel Danilyuk",
+      "link": "https://videos.pexels.com/video-files/8003418/8003418-hd_720_1280_25fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 8480685,
+      "duration": 38,
+      "user": "ArtHouse Studio",
+      "link": "https://videos.pexels.com/video-files/8480685/8480685-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "business meeting": [
+    {
+      "id": 8847929,
+      "duration": 18,
+      "user": "Mikhail Nilov",
+      "link": "https://videos.pexels.com/video-files/8847929/8847929-hd_720_1280_25fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 5923496,
+      "duration": 30,
+      "user": "RDNE Stock project",
+      "link": "https://videos.pexels.com/video-files/5923496/5923496-hd_1080_1920_30fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 8170431,
+      "duration": 8,
+      "user": "Kampus Production",
+      "link": "https://videos.pexels.com/video-files/8170431/8170431-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "phone ringing": [
+    {
+      "id": 8060394,
+      "duration": 28,
+      "user": "Ron Lach",
+      "link": "https://videos.pexels.com/video-files/8060394/8060394-hd_1080_2048_25fps.mp4",
+      "width": 1080,
+      "height": 2048
+    },
+    {
+      "id": 12405675,
+      "duration": 11,
+      "user": "RDNE Stock project",
+      "link": "https://videos.pexels.com/video-files/12405675/12405675-hd_1080_1920_30fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 12433208,
+      "duration": 11,
+      "user": "Hanna Pad",
+      "link": "https://videos.pexels.com/video-files/12433208/12433208-hd_1080_1920_30fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "call center": [
+    {
+      "id": 5452800,
+      "duration": 24,
+      "user": "Tima Miroshnichenko",
+      "link": "https://videos.pexels.com/video-files/5452800/5452800-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 7706612,
+      "duration": 31,
+      "user": "MART  PRODUCTION",
+      "link": "https://videos.pexels.com/video-files/7706612/7706612-hd_720_1366_25fps.mp4",
+      "width": 720,
+      "height": 1366
+    },
+    {
+      "id": 5452539,
+      "duration": 22,
+      "user": "Tima Miroshnichenko",
+      "link": "https://videos.pexels.com/video-files/5452539/5452539-hd_720_1280_25fps.mp4",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "phone notification": [
+    {
+      "id": 7822022,
+      "duration": 7,
+      "user": "RDNE Stock project",
+      "link": "https://videos.pexels.com/video-files/7822022/7822022-hd_1080_1920_30fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 7821861,
+      "duration": 8,
+      "user": "RDNE Stock project",
+      "link": "https://videos.pexels.com/video-files/7821861/7821861-hd_720_1280_30fps.mp4",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "clock time passing": [
+    {
+      "id": 8322052,
+      "duration": 20,
+      "user": "Tima Miroshnichenko",
+      "link": "https://videos.pexels.com/video-files/8322052/8322052-hd_720_1366_25fps.mp4",
+      "width": 720,
+      "height": 1366
+    },
+    {
+      "id": 7034335,
+      "duration": 15,
+      "user": "Tima Miroshnichenko",
+      "link": "https://videos.pexels.com/video-files/7034335/7034335-hd_720_1280_25fps.mp4",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "money loss": [
+    {
+      "id": 6282378,
+      "duration": 15,
+      "user": "Monstera Production",
+      "link": "https://videos.pexels.com/video-files/6282378/6282378-hd_1080_1920_30fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 6700659,
+      "duration": 11,
+      "user": "Tima Miroshnichenko",
+      "link": "https://videos.pexels.com/video-files/6700659/6700659-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "business chart down": [
+    {
+      "id": 6930229,
+      "duration": 11,
+      "user": "Mikhail Nilov",
+      "link": "https://videos.pexels.com/video-files/6930229/6930229-hd_720_1280_50fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 9306133,
+      "duration": 20,
+      "user": "Monstera Production",
+      "link": "https://videos.pexels.com/video-files/9306133/9306133-hd_1080_2048_30fps.mp4",
+      "width": 1080,
+      "height": 2048
+    },
+    {
+      "id": 6930233,
+      "duration": 25,
+      "user": "Mikhail Nilov",
+      "link": "https://videos.pexels.com/video-files/6930233/6930233-hd_720_1280_50fps.mp4",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "frustrated customer": [
+    {
+      "id": 8048478,
+      "duration": 14,
+      "user": "AI25.Studio  Studio",
+      "link": "https://videos.pexels.com/video-files/8048478/8048478-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 12908966,
+      "duration": 10,
+      "user": "Mizuno K",
+      "link": "https://videos.pexels.com/video-files/12908966/12908966-hd_720_1280_24fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 7918580,
+      "duration": 10,
+      "user": "Nicola Barts",
+      "link": "https://videos.pexels.com/video-files/7918580/7918580-hd_720_1280_24fps.mp4",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "competitor business": [
+    {
+      "id": 8373739,
+      "duration": 13,
+      "user": "Darina Belonogova",
+      "link": "https://videos.pexels.com/video-files/8373739/8373739-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 15645748,
+      "duration": 35,
+      "user": "Amar  Preciado",
+      "link": "https://videos.pexels.com/video-files/15645748/15645748-hd_720_1280_30fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 8373733,
+      "duration": 13,
+      "user": "Darina Belonogova",
+      "link": "https://videos.pexels.com/video-files/8373733/8373733-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "ai robot voice": [
+    {
+      "id": 8087011,
+      "duration": 13,
+      "user": "Pavel Danilyuk",
+      "link": "https://videos.pexels.com/video-files/8087011/8087011-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "code screen": [
+    {
+      "id": 5377697,
+      "duration": 16,
+      "user": "Tima Miroshnichenko",
+      "link": "https://videos.pexels.com/video-files/5377697/5377697-hd_720_1280_25fps.mp4",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "error message": [
+    {
+      "id": 9898435,
+      "duration": 24,
+      "user": "Ron Lach",
+      "link": "https://videos.pexels.com/video-files/9898435/9898435-hd_720_1366_25fps.mp4",
+      "width": 720,
+      "height": 1366
+    },
+    {
+      "id": 7362704,
+      "duration": 19,
+      "user": "RDNE Stock project",
+      "link": "https://videos.pexels.com/video-files/7362704/7362704-hd_720_1280_24fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 7821861,
+      "duration": 8,
+      "user": "RDNE Stock project",
+      "link": "https://videos.pexels.com/video-files/7821861/7821861-hd_720_1280_30fps.mp4",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "test fail": [
+    {
+      "id": 6830019,
+      "duration": 13,
+      "user": "Andy Barbour",
+      "link": "https://videos.pexels.com/video-files/6830019/6830019-hd_720_1280_24fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 7092104,
+      "duration": 7,
+      "user": "RDNE Stock project",
+      "link": "https://videos.pexels.com/video-files/7092104/7092104-hd_1080_1920_30fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 7092125,
+      "duration": 9,
+      "user": "RDNE Stock project",
+      "link": "https://videos.pexels.com/video-files/7092125/7092125-hd_720_1280_30fps.mp4",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "calculator math": [
+    {
+      "id": 6927325,
+      "duration": 3,
+      "user": "Polina Tankilevitch",
+      "link": "https://videos.pexels.com/video-files/6927325/6927325-hd_1080_1920_30fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 7413772,
+      "duration": 10,
+      "user": "RDNE Stock project",
+      "link": "https://videos.pexels.com/video-files/7413772/7413772-hd_1080_1920_24fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 6266261,
+      "duration": 10,
+      "user": "Tima Miroshnichenko",
+      "link": "https://videos.pexels.com/video-files/6266261/6266261-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "spreadsheet excel": [
+    {
+      "id": 8480291,
+      "duration": 31,
+      "user": "ArtHouse Studio",
+      "link": "https://videos.pexels.com/video-files/8480291/8480291-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 7055549,
+      "duration": 8,
+      "user": "Kindel Media",
+      "link": "https://videos.pexels.com/video-files/7055549/7055549-hd_720_1280_30fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 8479267,
+      "duration": 19,
+      "user": "ArtHouse Studio",
+      "link": "https://videos.pexels.com/video-files/8479267/8479267-hd_720_1280_25fps.mp4",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "phone call business": [
+    {
+      "id": 10040737,
+      "duration": 11,
+      "user": "Los Muertos Crew",
+      "link": "https://videos.pexels.com/video-files/10040737/10040737-hd_1080_1920_24fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 10040744,
+      "duration": 9,
+      "user": "Los Muertos Crew",
+      "link": "https://videos.pexels.com/video-files/10040744/10040744-hd_1080_1920_24fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 8906768,
+      "duration": 12,
+      "user": "Yan Krukau",
+      "link": "https://videos.pexels.com/video-files/8906768/8906768-hd_720_1280_25fps.mp4",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "waiting room": [
+    {
+      "id": 6763403,
+      "duration": 12,
+      "user": "Pavel Danilyuk",
+      "link": "https://videos.pexels.com/video-files/6763403/6763403-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 4824008,
+      "duration": 23,
+      "user": "Anna Shvets",
+      "link": "https://videos.pexels.com/video-files/4824008/4824008-hd_1080_1920_24fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 6081050,
+      "duration": 13,
+      "user": "Mister Edits",
+      "link": "https://videos.pexels.com/video-files/6081050/6081050-hd_1080_1920_30fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "stressed businessman": [
+    {
+      "id": 7918577,
+      "duration": 10,
+      "user": "Nicola Barts",
+      "link": "https://videos.pexels.com/video-files/7918577/7918577-hd_720_1280_24fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 13801293,
+      "duration": 10,
+      "user": "Mizuno K",
+      "link": "https://videos.pexels.com/video-files/13801293/13801293-hd_1080_1920_24fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 8731302,
+      "duration": 10,
+      "user": "Mikhail Nilov",
+      "link": "https://videos.pexels.com/video-files/8731302/8731302-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "money cash": [
+    {
+      "id": 6326861,
+      "duration": 18,
+      "user": "www.kaboompics.com",
+      "link": "https://videos.pexels.com/video-files/6326861/6326861-hd_720_1366_25fps.mp4",
+      "width": 720,
+      "height": 1366
+    },
+    {
+      "id": 6266251,
+      "duration": 11,
+      "user": "Tima Miroshnichenko",
+      "link": "https://videos.pexels.com/video-files/6266251/6266251-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "data analytics": [],
+  "crm software": [
+    {
+      "id": 7706947,
+      "duration": 8,
+      "user": "MART  PRODUCTION",
+      "link": "https://videos.pexels.com/video-files/7706947/7706947-hd_720_1366_25fps.mp4",
+      "width": 720,
+      "height": 1366
+    },
+    {
+      "id": 7683269,
+      "duration": 44,
+      "user": "Mikhail Nilov",
+      "link": "https://videos.pexels.com/video-files/7683269/7683269-hd_720_1280_24fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 7706605,
+      "duration": 27,
+      "user": "MART  PRODUCTION",
+      "link": "https://videos.pexels.com/video-files/7706605/7706605-hd_1080_2048_25fps.mp4",
+      "width": 1080,
+      "height": 2048
+    }
+  ],
+  "laptop screen dark": [
+    {
+      "id": 19532053,
+      "duration": 19,
+      "user": "Hasan  ACI",
+      "link": "https://videos.pexels.com/video-files/19532053/19532053-hd_720_1280_30fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 5473915,
+      "duration": 34,
+      "user": "cottonbro studio",
+      "link": "https://videos.pexels.com/video-files/5473915/5473915-hd_720_1366_25fps.mp4",
+      "width": 720,
+      "height": 1366
+    }
+  ],
+  "office night": [
+    {
+      "id": 7706626,
+      "duration": 19,
+      "user": "MART  PRODUCTION",
+      "link": "https://videos.pexels.com/video-files/7706626/7706626-hd_1080_2048_25fps.mp4",
+      "width": 1080,
+      "height": 2048
+    },
+    {
+      "id": 18184655,
+      "duration": 15,
+      "user": "Will Buildastock",
+      "link": "https://videos.pexels.com/video-files/18184655/18184655-hd_720_1280_30fps.mp4",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "phone missed call": [
+    {
+      "id": 6931573,
+      "duration": 13,
+      "user": "Mikhail Nilov",
+      "link": "https://videos.pexels.com/video-files/6931573/6931573-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 7698463,
+      "duration": 6,
+      "user": "MART  PRODUCTION",
+      "link": "https://videos.pexels.com/video-files/7698463/7698463-hd_1080_2048_25fps.mp4",
+      "width": 1080,
+      "height": 2048
+    },
+    {
+      "id": 7447927,
+      "duration": 22,
+      "user": "August de Richelieu",
+      "link": "https://videos.pexels.com/video-files/7447927/7447927-hd_720_1280_25fps.mp4",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "voicemail": [
+    {
+      "id": 7119842,
+      "duration": 61,
+      "user": "cottonbro studio",
+      "link": "https://videos.pexels.com/video-files/7119842/7119842-hd_720_1366_25fps.mp4",
+      "width": 720,
+      "height": 1366
+    },
+    {
+      "id": 8682965,
+      "duration": 32,
+      "user": "Ron Lach",
+      "link": "https://videos.pexels.com/video-files/8682965/8682965-hd_720_1366_25fps.mp4",
+      "width": 720,
+      "height": 1366
+    },
+    {
+      "id": 6962128,
+      "duration": 20,
+      "user": "Eva Bronzini",
+      "link": "https://videos.pexels.com/video-files/6962128/6962128-hd_720_1280_30fps.mp4",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "business phone ringing": [
+    {
+      "id": 8347250,
+      "duration": 13,
+      "user": "Kampus Production",
+      "link": "https://videos.pexels.com/video-files/8347250/8347250-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 8347247,
+      "duration": 12,
+      "user": "Kampus Production",
+      "link": "https://videos.pexels.com/video-files/8347247/8347247-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 12405675,
+      "duration": 11,
+      "user": "RDNE Stock project",
+      "link": "https://videos.pexels.com/video-files/12405675/12405675-hd_1080_1920_30fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "office worker stress": [
+    {
+      "id": 12909006,
+      "duration": 10,
+      "user": "Mizuno K",
+      "link": "https://videos.pexels.com/video-files/12909006/12909006-hd_1080_1920_24fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 8048438,
+      "duration": 12,
+      "user": "AI25.Studio  Studio",
+      "link": "https://videos.pexels.com/video-files/8048438/8048438-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 6913257,
+      "duration": 18,
+      "user": "Tima Miroshnichenko",
+      "link": "https://videos.pexels.com/video-files/6913257/6913257-hd_720_1280_25fps.mp4",
+      "width": 720,
+      "height": 1280
+    }
+  ],
+  "revenue growth chart": [
+    {
+      "id": 6282322,
+      "duration": 20,
+      "user": "Monstera Production",
+      "link": "https://videos.pexels.com/video-files/6282322/6282322-hd_720_1280_60fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 7947464,
+      "duration": 7,
+      "user": "RDNE Stock project",
+      "link": "https://videos.pexels.com/video-files/7947464/7947464-hd_1080_1920_30fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "business deal handshake": [
+    {
+      "id": 8814522,
+      "duration": 9,
+      "user": "Kampus Production",
+      "link": "https://videos.pexels.com/video-files/8814522/8814522-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 12893607,
+      "duration": 10,
+      "user": "Mizuno K",
+      "link": "https://videos.pexels.com/video-files/12893607/12893607-hd_1080_1920_24fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 6100414,
+      "duration": 9,
+      "user": "KATRIN  BOLOVTSOVA",
+      "link": "https://videos.pexels.com/video-files/6100414/6100414-hd_1080_2048_30fps.mp4",
+      "width": 1080,
+      "height": 2048
+    }
+  ],
+  "customer service phone": [
+    {
+      "id": 8865589,
+      "duration": 19,
+      "user": "Yan Krukau",
+      "link": "https://videos.pexels.com/video-files/8865589/8865589-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "id": 7707054,
+      "duration": 21,
+      "user": "MART  PRODUCTION",
+      "link": "https://videos.pexels.com/video-files/7707054/7707054-hd_720_1366_25fps.mp4",
+      "width": 720,
+      "height": 1366
+    },
+    {
+      "id": 7660480,
+      "duration": 11,
+      "user": "Alena Darmel",
+      "link": "https://videos.pexels.com/video-files/7660480/7660480-hd_1080_1920_25fps.mp4",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "phone hang up": [
+    {
+      "id": 16657124,
+      "duration": 14,
+      "user": "Erik Mclean",
+      "link": "https://videos.pexels.com/video-files/16657124/16657124-hd_720_1280_24fps.mp4",
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "id": 7119842,
+      "duration": 61,
+      "user": "cottonbro studio",
+      "link": "https://videos.pexels.com/video-files/7119842/7119842-hd_720_1366_25fps.mp4",
+      "width": 720,
+      "height": 1366
+    },
+    {
+      "id": 7447927,
+      "duration": 22,
+      "user": "August de Richelieu",
+      "link": "https://videos.pexels.com/video-files/7447927/7447927-hd_720_1280_25fps.mp4",
+      "width": 720,
+      "height": 1280
+    }
+  ]
+}
