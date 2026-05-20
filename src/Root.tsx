@@ -9,7 +9,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="TOFReel"
         component={TOFReel}
-        durationInFrames={1511}
+        durationInFrames={1491}
         fps={30}
         width={1080}
         height={1920}
@@ -25,7 +25,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BOFReel"
         component={BOFReel}
-        durationInFrames={1892}
+        durationInFrames={1831}
         fps={30}
         width={1080}
         height={1920}

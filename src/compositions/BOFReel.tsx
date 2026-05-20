@@ -2,19 +2,21 @@ import { AbsoluteFill, Audio, staticFile } from "remotion";
 import { VideoBackground } from "../components/VideoBackground";
 import { TextOverlay } from "../components/TextOverlay";
 import { ScreenMockup } from "../components/ScreenMockup";
+import { TerminalMockup } from "../components/TerminalMockup";
+import { SystemNotification } from "../components/SystemNotification";
 import { ProgressBar } from "../components/ProgressBar";
 
-// Duration: 63s = 1892 frames at 30fps
+// Duration: 61s = 1831 frames at 30fps
 export const BOFReel = () => {
-  const totalFrames = 1892;
+  const totalFrames = 1831;
 
   // Segment timings (in frames)
   const segments = {
     hook: { start: 0, duration: 97 },
-    filter: { start: 97, duration: 533 },
-    roi: { start: 630, duration: 524 },
-    positioning: { start: 1154, duration: 545 },
-    close: { start: 1699, duration: 193 },
+    filter: { start: 97, duration: 472 },
+    roi: { start: 569, duration: 524 },
+    positioning: { start: 1093, duration: 545 },
+    close: { start: 1638, duration: 193 },
   };
 
   return (
@@ -25,35 +27,35 @@ export const BOFReel = () => {
         startFrame={segments.hook.start}
         durationInFrames={segments.hook.duration}
         blur={2}
-        darken={0.6}
+        darken={0.7}
       />
       <VideoBackground
         src="bof_filter_bg.mp4"
         startFrame={segments.filter.start}
         durationInFrames={segments.filter.duration}
         blur={2}
-        darken={0.6}
+        darken={0.7}
       />
       <VideoBackground
         src="bof_roi_bg.mp4"
         startFrame={segments.roi.start}
         durationInFrames={segments.roi.duration}
         blur={2}
-        darken={0.6}
+        darken={0.7}
       />
       <VideoBackground
         src="bof_positioning_bg.mp4"
         startFrame={segments.positioning.start}
         durationInFrames={segments.positioning.duration}
         blur={2}
-        darken={0.6}
+        darken={0.7}
       />
       <VideoBackground
         src="bof_close_bg.mp4"
         startFrame={segments.close.start}
         durationInFrames={segments.close.duration}
         blur={2}
-        darken={0.6}
+        darken={0.7}
       />
 
       {/* Audio */}
@@ -75,28 +77,28 @@ export const BOFReel = () => {
       <TextOverlay
         text="This only works if you have consistent inbound demand."
         startFrame={segments.filter.start}
-        durationInFrames={160}
+        durationInFrames={118}
         style={{ top: "20%" }}
         animation="fade"
       />
       <TextOverlay
-        text="20+ calls per day. A real sales process."
-        startFrame={segments.filter.start + 160}
-        durationInFrames={160}
+        text="20+ calls per day."
+        startFrame={segments.filter.start + 118}
+        durationInFrames={118}
+        style={{ top: "20%" }}
+        animation="fade"
+      />
+      <TextOverlay
+        text="A real sales process."
+        startFrame={segments.filter.start + 236}
+        durationInFrames={118}
         style={{ top: "20%" }}
         animation="fade"
       />
       <TextOverlay
         text="Something to actually automate."
-        startFrame={segments.filter.start + 320}
-        durationInFrames={100}
-        style={{ top: "20%" }}
-        animation="fade"
-      />
-      <TextOverlay
-        text="If you're still figuring out where your leads come from, fix that first."
-        startFrame={segments.filter.start + 420}
-        durationInFrames={113}
+        startFrame={segments.filter.start + 354}
+        durationInFrames={118}
         style={{ top: "20%" }}
         animation="fade"
       />
@@ -108,24 +110,40 @@ export const BOFReel = () => {
         durationInFrames={350}
       />
 
+      {/* System notification — qualification filter */}
+      <SystemNotification
+        title="QUALIFICATION CHECK"
+        message="Inbound calls: 23/day ✓ | Sales process: ACTIVE ✓ | Automatable: YES ✓"
+        type="info"
+        startFrame={segments.filter.start + 200}
+        durationInFrames={200}
+      />
+
       <TextOverlay
         text="If you're getting 20+ calls and missing even 4 of them, do the math."
         startFrame={segments.roi.start}
-        durationInFrames={160}
+        durationInFrames={131}
         style={{ top: "18%" }}
         animation="fade"
       />
       <TextOverlay
-        text="What's your average deal worth? Multiply by 4. Multiply by 22 working days."
-        startFrame={segments.roi.start + 160}
-        durationInFrames={180}
+        text="What's your average deal worth?"
+        startFrame={segments.roi.start + 131}
+        durationInFrames={131}
         style={{ top: "18%" }}
         animation="fade"
       />
       <TextOverlay
-        text="That's your monthly leak. And that's just the calls you know about."
-        startFrame={segments.roi.start + 340}
-        durationInFrames={184}
+        text="Multiply by 4."
+        startFrame={segments.roi.start + 262}
+        durationInFrames={131}
+        style={{ top: "18%" }}
+        animation="fade"
+      />
+      <TextOverlay
+        text="Multiply by 22 working days."
+        startFrame={segments.roi.start + 393}
+        durationInFrames={131}
         style={{ top: "18%" }}
         animation="fade"
       />
@@ -137,46 +155,87 @@ export const BOFReel = () => {
         durationInFrames={350}
       />
 
+      {/* System notification — leak calculation */}
+      <SystemNotification
+        title="REVENUE LEAK DETECTED"
+        message="Monthly leak: $264,000 | Annual projection: $3,168,000"
+        type="warning"
+        startFrame={segments.roi.start + 300}
+        durationInFrames={180}
+      />
+
       <TextOverlay
         text="This replaces response bottlenecks."
         startFrame={segments.positioning.start}
-        durationInFrames={140}
+        durationInFrames={109}
         style={{ top: "20%" }}
         animation="fade"
       />
       <TextOverlay
-        text="Not marketing. Not sales skills."
-        startFrame={segments.positioning.start + 140}
-        durationInFrames={140}
+        text="Not marketing."
+        startFrame={segments.positioning.start + 109}
+        durationInFrames={109}
+        style={{ top: "20%" }}
+        animation="fade"
+      />
+      <TextOverlay
+        text="Not sales skills."
+        startFrame={segments.positioning.start + 218}
+        durationInFrames={109}
         style={{ top: "20%" }}
         animation="fade"
       />
       <TextOverlay
         text="Just the gap between 'someone wants to talk' and 'someone actually talks to them.'"
-        startFrame={segments.positioning.start + 280}
-        durationInFrames={160}
-        style={{ top: "20%", fontSize: "44px" }}
+        startFrame={segments.positioning.start + 327}
+        durationInFrames={109}
+        style={{ top: "20%", fontSize: "40px" }}
         animation="fade"
       />
       <TextOverlay
-        text="That's it. That's all it does. But for the right business, that's everything."
-        startFrame={segments.positioning.start + 440}
-        durationInFrames={105}
-        style={{ top: "20%", fontSize: "44px" }}
+        text="That's it. That's all it does."
+        startFrame={segments.positioning.start + 436}
+        durationInFrames={109}
+        style={{ top: "20%", fontSize: "40px" }}
         animation="fade"
       />
 
+      {/* Terminal showing system capabilities */}
+      <TerminalMockup
+        lines={[
+          "$ axovion status --capabilities",
+          "// Response Infrastructure",
+          "✓ Inbound call capture",
+          "✓ AI voice response",
+          "✓ Lead qualification",
+          "✓ Appointment booking",
+          "✓ CRM sync",
+          "✓ Analytics pipeline",
+          "",
+          "// What it does NOT do:",
+          "✗ Generate leads",
+          "✗ Close deals",
+          "✗ Replace your team",
+          "",
+          "$ axovion deploy",
+          "// Gap closed.",
+        ]}
+        startFrame={segments.positioning.start + 80}
+        durationInFrames={400}
+        typingSpeed={3}
+      />
+
       <TextOverlay
-        text="If that gap is costing you money, DM me."
+        text="But for the right business, that's everything."
         startFrame={segments.close.start}
-        durationInFrames={100}
+        durationInFrames={96}
         style={{ top: "30%" }}
         animation="slideUp"
       />
       <TextOverlay
-        text="I'll calculate the leak for your business."
-        startFrame={segments.close.start + 100}
-        durationInFrames={93}
+        text="If that gap is costing you money, DM me."
+        startFrame={segments.close.start + 96}
+        durationInFrames={97}
         style={{ top: "30%" }}
         animation="slideUp"
       />
@@ -184,21 +243,21 @@ export const BOFReel = () => {
       {/* Progress Bar */}
       <ProgressBar totalFrames={totalFrames} color="#10b981" />
 
-      {/* Brand Watermark */}
+      {/* Subtle corner branding */}
       <div
         style={{
           position: "absolute",
-          bottom: "24px",
-          right: "24px",
-          color: "rgba(255,255,255,0.4)",
-          fontSize: "14px",
-          fontFamily: "Inter, system-ui, sans-serif",
-          fontWeight: 600,
-          letterSpacing: "0.1em",
+          bottom: "20px",
+          right: "20px",
+          color: "rgba(255,255,255,0.25)",
+          fontSize: "11px",
+          fontFamily: "'JetBrains Mono', monospace",
+          fontWeight: 500,
+          letterSpacing: "0.15em",
           zIndex: 100,
         }}
       >
-        AXOVION
+        AXOVION // SYSTEMS
       </div>
     </AbsoluteFill>
   );
