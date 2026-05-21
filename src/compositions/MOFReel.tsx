@@ -1,10 +1,11 @@
-import { AbsoluteFill, Audio, staticFile } from "remotion";
+import { AbsoluteFill } from "remotion";
 import { VideoBackground } from "../components/VideoBackground";
 import { TextOverlay } from "../components/TextOverlay";
 import { ScreenMockup } from "../components/ScreenMockup";
 import { TerminalMockup } from "../components/TerminalMockup";
 import { SystemNotification } from "../components/SystemNotification";
 import { ProgressBar } from "../components/ProgressBar";
+import { AudioSegment } from "../components/AudioSegment";
 
 // Duration: 37s = 1110 frames at 30fps
 export const MOFReel = () => {
@@ -58,12 +59,12 @@ export const MOFReel = () => {
         darken={0.7}
       />
 
-      {/* Audio */}
-      <Audio src={staticFile("mof_hook.mp3")} startFrom={0} endAt={segments.hook.duration} />
-      <Audio src={staticFile("mof_fail1.mp3")} startFrom={0} endAt={segments.fail1.duration} />
-      <Audio src={staticFile("mof_fail2.mp3")} startFrom={0} endAt={segments.fail2.duration} />
-      <Audio src={staticFile("mof_fail3.mp3")} startFrom={0} endAt={segments.fail3.duration} />
-      <Audio src={staticFile("mof_close.mp3")} startFrom={0} endAt={segments.close.duration} />
+      {/* Audio — properly sequenced to prevent overlap */}
+      <AudioSegment src="mof_hook.mp3" startFrame={segments.hook.start} durationInFrames={segments.hook.duration} />
+      <AudioSegment src="mof_fail1.mp3" startFrame={segments.fail1.start} durationInFrames={segments.fail1.duration} />
+      <AudioSegment src="mof_fail2.mp3" startFrame={segments.fail2.start} durationInFrames={segments.fail2.duration} />
+      <AudioSegment src="mof_fail3.mp3" startFrame={segments.fail3.start} durationInFrames={segments.fail3.duration} />
+      <AudioSegment src="mof_close.mp3" startFrame={segments.close.start} durationInFrames={segments.close.duration} />
 
       {/* Text Overlays */}
       <TextOverlay

@@ -1,4 +1,4 @@
-import { useCurrentFrame, interpolate } from "remotion";
+import { useCurrentFrame, interpolate, Easing } from "remotion";
 
 interface ProgressBarProps {
   totalFrames: number;
@@ -13,7 +13,16 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
   const progress = interpolate(frame, [0, totalFrames], [0, 100], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
+    easing: Easing.inOut(Easing.cubic),
   });
+
+  // Glow pulse at the leading edge
+  const glowOpacity = interpolate(
+    frame % 30,
+    [0, 15, 30],
+    [0.6, 1, 0.6],
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+  );
 
   return (
     <div
@@ -22,8 +31,8 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
         bottom: 0,
         left: 0,
         width: "100%",
-        height: "4px",
-        background: "rgba(255,255,255,0.1)",
+        height: "3px",
+        background: "rgba(255,255,255,0.05)",
         zIndex: 100,
       }}
     >
@@ -32,7 +41,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
           width: `${progress}%`,
           height: "100%",
           background: color,
-          transition: "width 0.1s linear",
+          boxShadow: `0 0 6px ${color}${Math.floor(glowOpacity * 255).toString(16).padStart(2, "0")}`,
         }}
       />
     </div>

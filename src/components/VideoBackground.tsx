@@ -1,5 +1,4 @@
-import { Video, staticFile, useCurrentFrame } from "remotion";
-import { interpolate } from "remotion";
+import { Video, staticFile, useCurrentFrame, interpolate, Easing } from "remotion";
 
 interface VideoBackgroundProps {
   src: string;
@@ -16,16 +15,26 @@ export const VideoBackground: React.FC<VideoBackgroundProps> = ({
   durationInFrames,
   style = {},
   blur = 0,
-  darken = 0.5,
+  darken = 0.7,
 }) => {
   const frame = useCurrentFrame();
   const relativeFrame = frame - startFrame;
-  
+
+  // Only render if within this segment's timeframe
+  if (relativeFrame < -15 || relativeFrame >= durationInFrames + 15) return null;
+
   const opacity = interpolate(
     relativeFrame,
-    [0, 10, durationInFrames - 10, durationInFrames],
+    [-5, 0, durationInFrames, durationInFrames + 5],
     [0, 1, 1, 0],
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+  );
+
+  const scale = interpolate(
+    relativeFrame,
+    [-5, 0, durationInFrames, durationInFrames + 5],
+    [1.05, 1, 1, 1.05],
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) }
   );
 
   return (
@@ -48,6 +57,7 @@ export const VideoBackground: React.FC<VideoBackgroundProps> = ({
           height: "100%",
           objectFit: "cover",
           filter: `blur(${blur}px) brightness(${1 - darken})`,
+          transform: `scale(${scale})`,
         }}
       />
     </div>

@@ -1,4 +1,4 @@
-import { AbsoluteFill, Audio, staticFile } from "remotion";
+import { AbsoluteFill } from "remotion";
 import { VideoBackground } from "../components/VideoBackground";
 import { TextOverlay } from "../components/TextOverlay";
 import { ScreenMockup } from "../components/ScreenMockup";
@@ -7,6 +7,7 @@ import { ResponseTimer } from "../components/ResponseTimer";
 import { SystemNotification } from "../components/SystemNotification";
 import { PipelineFlow } from "../components/PipelineFlow";
 import { ProgressBar } from "../components/ProgressBar";
+import { AudioSegment } from "../components/AudioSegment";
 
 // Duration: 49s = 1491 frames at 30fps
 export const TOFReel = () => {
@@ -67,14 +68,14 @@ export const TOFReel = () => {
         darken={0.7}
       />
 
-      {/* Audio */}
-      <Audio src={staticFile("tof_hook.mp3")} startFrom={0} endAt={segments.hook.duration} />
-      <Audio src={staticFile("tof_problem.mp3")} startFrom={0} endAt={segments.problem.duration} />
-      <Audio src={staticFile("tof_consequence.mp3")} startFrom={0} endAt={segments.consequence.duration} />
-      <Audio src={staticFile("tof_observation.mp3")} startFrom={0} endAt={segments.observation.duration} />
-      <Audio src={staticFile("tof_tension.mp3")} startFrom={0} endAt={segments.tension.duration} />
-      <Audio src={staticFile("tof_bridge.mp3")} startFrom={0} endAt={segments.bridge.duration} />
-      <Audio src={staticFile("tof_close.mp3")} startFrom={0} endAt={segments.close.duration} />
+      {/* Audio — properly sequenced to prevent overlap */}
+      <AudioSegment src="tof_hook.mp3" startFrame={segments.hook.start} durationInFrames={segments.hook.duration} />
+      <AudioSegment src="tof_problem.mp3" startFrame={segments.problem.start} durationInFrames={segments.problem.duration} />
+      <AudioSegment src="tof_consequence.mp3" startFrame={segments.consequence.start} durationInFrames={segments.consequence.duration} />
+      <AudioSegment src="tof_observation.mp3" startFrame={segments.observation.start} durationInFrames={segments.observation.duration} />
+      <AudioSegment src="tof_tension.mp3" startFrame={segments.tension.start} durationInFrames={segments.tension.duration} />
+      <AudioSegment src="tof_bridge.mp3" startFrame={segments.bridge.start} durationInFrames={segments.bridge.duration} />
+      <AudioSegment src="tof_close.mp3" startFrame={segments.close.start} durationInFrames={segments.close.duration} />
 
       {/* Text Overlays */}
       <TextOverlay

@@ -1,4 +1,4 @@
-import { useCurrentFrame, interpolate } from "remotion";
+import { useCurrentFrame, interpolate, Easing } from "remotion";
 
 interface PipelineFlowProps {
   startFrame: number;
@@ -14,20 +14,20 @@ export const PipelineFlow: React.FC<PipelineFlowProps> = ({
   const frame = useCurrentFrame();
   const relativeFrame = frame - startFrame;
 
-  if (relativeFrame < 0 || relativeFrame >= durationInFrames) return null;
+  if (relativeFrame < -10 || relativeFrame >= durationInFrames + 10) return null;
 
   const opacity = interpolate(
     relativeFrame,
-    [0, 8, durationInFrames - 8, durationInFrames],
+    [0, 10, durationInFrames - 10, durationInFrames],
     [0, 1, 1, 0],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) }
   );
 
   const flowProgress = interpolate(
     relativeFrame,
-    [20, durationInFrames - 20],
+    [15, durationInFrames - 20],
     [0, 1],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) }
   );
 
   const stages = [
@@ -74,8 +74,18 @@ export const PipelineFlow: React.FC<PipelineFlowProps> = ({
 
         <div style={{ display: "flex", alignItems: "center", gap: "0" }}>
           {stages.map((stage, i) => {
-            const isActive = flowProgress > i / stages.length;
-            const isCurrent = flowProgress >= i / stages.length && flowProgress < (i + 1) / stages.length;
+            const stageThreshold = i / stages.length;
+            const nextThreshold = (i + 1) / stages.length;
+            const isActive = flowProgress > stageThreshold;
+            const isCurrent = flowProgress >= stageThreshold && flowProgress < nextThreshold;
+            
+            // Staggered entrance for each stage
+            const stageEntrance = interpolate(
+              flowProgress,
+              [stageThreshold - 0.05, stageThreshold + 0.05],
+              [0, 1],
+              { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.back(1.2)) }
+            );
 
             return (
               <div key={i} style={{ display: "flex", alignItems: "center", flex: 1 }}>
@@ -88,6 +98,9 @@ export const PipelineFlow: React.FC<PipelineFlowProps> = ({
                     borderRadius: i === 0 ? "8px 0 0 8px" : i === stages.length - 1 ? "0 8px 8px 0" : "0",
                     textAlign: "center",
                     position: "relative",
+                    opacity: Math.max(stageEntrance, isActive ? 1 : 0.3),
+                    transform: `scale(${isActive ? 1 : 0.95})`,
+                    transition: "none",
                   }}
                 >
                   <div
@@ -120,6 +133,7 @@ export const PipelineFlow: React.FC<PipelineFlowProps> = ({
                         height: "2px",
                         background: stage.color,
                         boxShadow: `0 0 8px ${stage.color}`,
+                        animation: "pulse 1s infinite",
                       }}
                     />
                   )}
@@ -130,6 +144,7 @@ export const PipelineFlow: React.FC<PipelineFlowProps> = ({
                       width: "20px",
                       height: "2px",
                       background: isActive ? stage.color : "#222",
+                      opacity: isActive ? 1 : 0.3,
                     }}
                   />
                 )}

@@ -1,4 +1,4 @@
-import { useCurrentFrame, interpolate } from "remotion";
+import { useCurrentFrame, interpolate, Easing } from "remotion";
 
 interface ResponseTimerProps {
   startFrame: number;
@@ -14,24 +14,34 @@ export const ResponseTimer: React.FC<ResponseTimerProps> = ({
   const frame = useCurrentFrame();
   const relativeFrame = frame - startFrame;
 
-  if (relativeFrame < 0 || relativeFrame >= durationInFrames) return null;
+  if (relativeFrame < -10 || relativeFrame >= durationInFrames + 10) return null;
 
   const opacity = interpolate(
     relativeFrame,
-    [0, 8, durationInFrames - 8, durationInFrames],
+    [0, 10, durationInFrames - 10, durationInFrames],
     [0, 1, 1, 0],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) }
   );
 
   const progress = interpolate(
     relativeFrame,
-    [0, durationInFrames * 0.7],
+    [10, durationInFrames * 0.75],
     [0, 1],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) }
   );
 
   const currentMs = Math.floor(progress * targetMs);
   const isCritical = currentMs > targetMs * 0.8;
+
+  // Pulse effect when critical
+  const pulseIntensity = isCritical
+    ? interpolate(
+        relativeFrame % 30,
+        [0, 15, 30],
+        [0, 1, 0],
+        { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+      )
+    : 0;
 
   return (
     <div
@@ -53,8 +63,11 @@ export const ResponseTimer: React.FC<ResponseTimerProps> = ({
           fontSize: "72px",
           fontWeight: 700,
           color: isCritical ? "#ef4444" : "#fbbf24",
-          textShadow: "0 0 40px rgba(239,68,68,0.3)",
+          textShadow: isCritical
+            ? `0 0 ${40 + pulseIntensity * 20}px rgba(239,68,68,${0.3 + pulseIntensity * 0.4})`
+            : "0 0 40px rgba(251,191,36,0.3)",
           letterSpacing: "-0.02em",
+          transform: isCritical ? `scale(${1 + pulseIntensity * 0.02})` : "scale(1)",
         }}
       >
         {currentMs.toString().padStart(4, "0")}ms
@@ -75,7 +88,7 @@ export const ResponseTimer: React.FC<ResponseTimerProps> = ({
             background: isCritical
               ? "linear-gradient(90deg, #fbbf24, #ef4444)"
               : "#fbbf24",
-            transition: "width 0.1s linear",
+            boxShadow: isCritical ? `0 0 10px rgba(239,68,68,0.5)` : "none",
           }}
         />
       </div>

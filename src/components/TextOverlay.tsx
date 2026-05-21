@@ -1,11 +1,11 @@
-import { useCurrentFrame, interpolate } from "remotion";
+import { useCurrentFrame, interpolate, Easing } from "remotion";
 
 interface TextOverlayProps {
   text: string;
   startFrame: number;
   durationInFrames: number;
   style?: React.CSSProperties;
-  animation?: "fade" | "slideUp" | "typewriter";
+  animation?: "fade" | "slideUp" | "typewriter" | "scaleIn";
   delay?: number;
 }
 
@@ -20,32 +20,49 @@ export const TextOverlay: React.FC<TextOverlayProps> = ({
   const frame = useCurrentFrame();
   const relativeFrame = frame - startFrame - delay;
 
-  if (relativeFrame < 0 || relativeFrame >= durationInFrames) return null;
+  if (relativeFrame < -10 || relativeFrame >= durationInFrames + 10) return null;
 
   let opacity = 1;
   let transform = "translateY(0)";
+  let scale = 1;
+
+  const fadeInDuration = 10;
+  const fadeOutDuration = 10;
 
   if (animation === "fade") {
     opacity = interpolate(
       relativeFrame,
-      [0, 8, durationInFrames - 8, durationInFrames],
+      [0, fadeInDuration, durationInFrames - fadeOutDuration, durationInFrames],
       [0, 1, 1, 0],
-      { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+      { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) }
     );
   } else if (animation === "slideUp") {
     opacity = interpolate(
       relativeFrame,
-      [0, 10, durationInFrames - 10, durationInFrames],
+      [0, fadeInDuration, durationInFrames - fadeOutDuration, durationInFrames],
       [0, 1, 1, 0],
-      { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+      { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) }
     );
     const y = interpolate(
       relativeFrame,
-      [0, 10],
-      [30, 0],
-      { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+      [0, fadeInDuration],
+      [40, 0],
+      { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) }
     );
     transform = `translateY(${y}px)`;
+  } else if (animation === "scaleIn") {
+    opacity = interpolate(
+      relativeFrame,
+      [0, fadeInDuration, durationInFrames - fadeOutDuration, durationInFrames],
+      [0, 1, 1, 0],
+      { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) }
+    );
+    scale = interpolate(
+      relativeFrame,
+      [0, fadeInDuration],
+      [0.9, 1],
+      { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.back(1.5)) }
+    );
   }
 
   return (
@@ -53,10 +70,10 @@ export const TextOverlay: React.FC<TextOverlayProps> = ({
       style={{
         position: "absolute",
         width: "100%",
-        padding: "0 40px",
+        padding: "0 48px",
         textAlign: "center",
         opacity,
-        transform,
+        transform: `${transform} scale(${scale})`,
         ...style,
       }}
     >
@@ -64,10 +81,10 @@ export const TextOverlay: React.FC<TextOverlayProps> = ({
         style={{
           fontFamily: "Inter, system-ui, sans-serif",
           fontWeight: 700,
-          fontSize: "52px",
+          fontSize: style.fontSize || "52px",
           lineHeight: 1.3,
           color: "#ffffff",
-          textShadow: "0 2px 20px rgba(0,0,0,0.8)",
+          textShadow: "0 2px 30px rgba(0,0,0,0.9), 0 0 60px rgba(0,0,0,0.5)",
           margin: 0,
           letterSpacing: "-0.02em",
         }}

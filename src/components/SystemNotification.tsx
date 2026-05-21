@@ -1,4 +1,4 @@
-import { useCurrentFrame, interpolate } from "remotion";
+import { useCurrentFrame, interpolate, Easing } from "remotion";
 
 interface SystemNotificationProps {
   title: string;
@@ -18,20 +18,27 @@ export const SystemNotification: React.FC<SystemNotificationProps> = ({
   const frame = useCurrentFrame();
   const relativeFrame = frame - startFrame;
 
-  if (relativeFrame < 0 || relativeFrame >= durationInFrames) return null;
+  if (relativeFrame < -15 || relativeFrame >= durationInFrames + 15) return null;
 
   const opacity = interpolate(
     relativeFrame,
-    [0, 10, durationInFrames - 10, durationInFrames],
+    [0, 12, durationInFrames - 12, durationInFrames],
     [0, 1, 1, 0],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) }
   );
 
   const slideX = interpolate(
     relativeFrame,
-    [0, 15],
-    [100, 0],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+    [0, 20],
+    [120, 0],
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) }
+  );
+
+  const scale = interpolate(
+    relativeFrame,
+    [0, 20],
+    [0.95, 1],
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.back(1.2)) }
   );
 
   const colors = {
@@ -49,7 +56,7 @@ export const SystemNotification: React.FC<SystemNotificationProps> = ({
         position: "absolute",
         top: "15%",
         right: "5%",
-        transform: `translateX(${slideX}px)`,
+        transform: `translateX(${slideX}px) scale(${scale})`,
         opacity,
         width: "320px",
         background: color.bg,

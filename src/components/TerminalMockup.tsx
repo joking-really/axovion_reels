@@ -1,4 +1,4 @@
-import { useCurrentFrame, interpolate } from "remotion";
+import { useCurrentFrame, interpolate, Easing } from "remotion";
 
 interface TerminalMockupProps {
   lines: string[];
@@ -11,21 +11,24 @@ export const TerminalMockup: React.FC<TerminalMockupProps> = ({
   lines,
   startFrame,
   durationInFrames,
-  typingSpeed = 2,
+  typingSpeed = 3,
 }) => {
   const frame = useCurrentFrame();
   const relativeFrame = frame - startFrame;
 
-  if (relativeFrame < 0 || relativeFrame >= durationInFrames) return null;
+  if (relativeFrame < -10 || relativeFrame >= durationInFrames + 10) return null;
 
   const opacity = interpolate(
     relativeFrame,
-    [0, 8, durationInFrames - 8, durationInFrames],
+    [0, 10, durationInFrames - 10, durationInFrames],
     [0, 1, 1, 0],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) }
   );
 
   const visibleLines = Math.floor(relativeFrame / typingSpeed);
+  
+  // Cursor blink - slower, more natural (every 20 frames ~ 0.66s at 30fps)
+  const showCursor = relativeFrame % 20 < 10;
 
   return (
     <div
@@ -72,11 +75,11 @@ export const TerminalMockup: React.FC<TerminalMockupProps> = ({
             key={i}
             style={{
               color: line.startsWith("$") ? "#4ade80" : line.startsWith("//") ? "#666" : "#e5e5e5",
-              opacity: i === visibleLines - 1 ? 1 : 0.8,
+              opacity: i === visibleLines - 1 ? 1 : 0.85,
             }}
           >
             {line}
-            {i === visibleLines - 1 && relativeFrame % 30 < 15 && (
+            {i === visibleLines - 1 && showCursor && (
               <span style={{ color: "#4ade80" }}>▊</span>
             )}
           </div>

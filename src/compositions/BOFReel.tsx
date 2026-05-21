@@ -1,10 +1,11 @@
-import { AbsoluteFill, Audio, staticFile } from "remotion";
+import { AbsoluteFill } from "remotion";
 import { VideoBackground } from "../components/VideoBackground";
 import { TextOverlay } from "../components/TextOverlay";
 import { ScreenMockup } from "../components/ScreenMockup";
 import { TerminalMockup } from "../components/TerminalMockup";
 import { SystemNotification } from "../components/SystemNotification";
 import { ProgressBar } from "../components/ProgressBar";
+import { AudioSegment } from "../components/AudioSegment";
 
 // Duration: 61s = 1831 frames at 30fps
 export const BOFReel = () => {
@@ -58,12 +59,12 @@ export const BOFReel = () => {
         darken={0.7}
       />
 
-      {/* Audio */}
-      <Audio src={staticFile("bof_hook.mp3")} startFrom={0} endAt={segments.hook.duration} />
-      <Audio src={staticFile("bof_filter.mp3")} startFrom={0} endAt={segments.filter.duration} />
-      <Audio src={staticFile("bof_roi.mp3")} startFrom={0} endAt={segments.roi.duration} />
-      <Audio src={staticFile("bof_positioning.mp3")} startFrom={0} endAt={segments.positioning.duration} />
-      <Audio src={staticFile("bof_close.mp3")} startFrom={0} endAt={segments.close.duration} />
+      {/* Audio — properly sequenced to prevent overlap */}
+      <AudioSegment src="bof_hook.mp3" startFrame={segments.hook.start} durationInFrames={segments.hook.duration} />
+      <AudioSegment src="bof_filter.mp3" startFrame={segments.filter.start} durationInFrames={segments.filter.duration} />
+      <AudioSegment src="bof_roi.mp3" startFrame={segments.roi.start} durationInFrames={segments.roi.duration} />
+      <AudioSegment src="bof_positioning.mp3" startFrame={segments.positioning.start} durationInFrames={segments.positioning.duration} />
+      <AudioSegment src="bof_close.mp3" startFrame={segments.close.start} durationInFrames={segments.close.duration} />
 
       {/* Text Overlays */}
       <TextOverlay

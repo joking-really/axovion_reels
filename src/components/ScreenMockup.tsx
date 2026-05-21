@@ -1,4 +1,4 @@
-import { useCurrentFrame, interpolate } from "remotion";
+import { useCurrentFrame, interpolate, Easing } from "remotion";
 
 interface ScreenMockupProps {
   type: "callLog" | "crmPipeline" | "calculator" | "errorLog" | "codeEditor";
@@ -14,13 +14,20 @@ export const ScreenMockup: React.FC<ScreenMockupProps> = ({
   const frame = useCurrentFrame();
   const relativeFrame = frame - startFrame;
 
-  if (relativeFrame < 0 || relativeFrame >= durationInFrames) return null;
+  if (relativeFrame < -10 || relativeFrame >= durationInFrames + 10) return null;
 
   const opacity = interpolate(
     relativeFrame,
-    [0, 8, durationInFrames - 8, durationInFrames],
+    [0, 12, durationInFrames - 12, durationInFrames],
     [0, 1, 1, 0],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) }
+  );
+
+  const scale = interpolate(
+    relativeFrame,
+    [0, 15],
+    [0.96, 1],
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.back(1.3)) }
   );
 
   const renderContent = () => {
@@ -76,13 +83,13 @@ export const ScreenMockup: React.FC<ScreenMockupProps> = ({
         return (
           <div style={{...screenStyle, fontFamily: "monospace", fontSize: "14px"}}>
             <div style={headerStyle}>voice-agent.ts</div>
-            <div style={codeLineStyle(1)}>const config = {'{'}</div>
+            <div style={codeLineStyle(1)}>const config = {"{"}</div>
             <div style={codeLineStyle(2)}>  interruptThreshold: 0.3,</div>
             <div style={codeLineStyle(3, true)}>  // BUG: Too aggressive</div>
             <div style={codeLineStyle(4, true)}>  // Fixed: 0.3 → 0.7</div>
             <div style={codeLineStyle(5)}>  accentModel: "en-US",</div>
             <div style={codeLineStyle(6, true)}>  // BUG: Missing PK support</div>
-            <div style={codeLineStyle(7)}>{'}'}</div>
+            <div style={codeLineStyle(7)}>{"}"}</div>
           </div>
         );
       default:
@@ -102,7 +109,9 @@ export const ScreenMockup: React.FC<ScreenMockupProps> = ({
         maxWidth: "600px",
       }}
     >
-      {renderContent()}
+      <div style={{ transform: `scale(${scale})`, transition: "none" }}>
+        {renderContent()}
+      </div>
     </div>
   );
 };
